@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello</h1>
+    <form method = 'POST'>
+
+        {% csrf_token %}
+        <br>
+        <input type = 'text' placeholder="Enter your city" name= 'city' >
+        <button type = 'submit'>Enter</button>
+    </form>
+    {%if error == '0' %}
+    <h1>Description : {{description}}</h1>
+    <h1>icon : {{icon}}</h1>
+    <h1>Temperature : {{temp}}</h1>
+    <h1>Day : {{day}}</h1>
+    <h1>City : {{city}}</h1>
+    {% else %}
+    <h1>Enter right city</h1>
+    {% endif%}
+        
 </body>
 </html>

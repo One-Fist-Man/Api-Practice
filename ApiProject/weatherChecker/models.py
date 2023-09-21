@@ -5,6 +5,6 @@ class Contact(models.Model):
     title= models.CharField(max_length=50)
     email= models.EmailField(max_length=254)
 
-    def __str__(self):
-        return self.name
+    # def __str__(self):
+    #     return self.name
 
